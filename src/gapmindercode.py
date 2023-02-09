@@ -7,4 +7,7 @@ url = "https://raw.githubusercontent.com/jennybc/gapminder/main/inst/extdata/gap
 
 gapminderdf = pd.read_table(url)
 
-print(gapminderdf.head())
+#print(gapminderdf.head())
+
+sns.histplot(data=gapminderdf, x='continent', y='lifeExp')
+plt.show()
