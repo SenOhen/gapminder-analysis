@@ -8,6 +8,12 @@ from gapmindercode import gapminderdf, Africadf, Asiadf, Europedf, Americasdf, O
 fig = plt.figure()
 graph = sns.FacetGrid(gapminderdf, col='continent')
 graph.map(sns.scatterplot,'gdpPercap', 'lifeExp')
+
+plt.savefig("figs/LE_vs_GDPpercapita_linear_scale.png")
+
+fig = plt.figure()
+graph = sns.FacetGrid(gapminderdf, col='continent')
+graph.map(sns.scatterplot,'gdpPercap', 'lifeExp')
 plt.xscale("log")
 
-plt.savefig("figs/LE_vs_GDPpercapita.png")
+plt.savefig("figs/LE_vs_GDPpercapita_log_scale.png")
