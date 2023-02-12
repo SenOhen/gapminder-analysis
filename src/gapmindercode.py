@@ -12,10 +12,6 @@ for item in continents:
    globals()[str] = gapminderdf[gapminderdf['continent']==item]
    #setattr(self,name,value)
 
-# Africadf = gapminderdf[gapminderdf['continent']=='Africa']
-# Europedf = gapminderdf[gapminderdf['continent']=='Europe']
-# Asiadf = gapminderdf[gapminderdf['continent']=='Asia']
-# Americasdf = gapminderdf[gapminderdf['continent']=='Americas']
-# Oceaniadf = gapminderdf[gapminderdf['continent']=='Oceania']
+#print(np.unique(gapminderdf['year']))
 #print(gapminderdf.head())
 #print(Europedf.head())

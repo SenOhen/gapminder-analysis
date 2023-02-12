@@ -5,10 +5,13 @@ import matplotlib.pyplot as plt
 
 from gapmindercode import gapminderdf, Africadf, Asiadf, Europedf, Americasdf, Oceaniadf
 
-fig = plt.figure()
+# Visualizing life expectancy distibution by continent
 graph = sns.FacetGrid(gapminderdf, col='continent')
 graph.map(sns.histplot, 'lifeExp')
-#sns.histplot(data=gapminderdf, x='continent', y='lifeExp')
-plt.ylim(0,90)
-#plt.title("Distribution of Life Expectancy by Continent")
+
+# Making space for figure title, and setting axis parameters
+graph.fig.subplots_adjust(top=0.8)
+graph.fig.suptitle("Distribution of Life Expectancy by Continent")
+graph.set(ylim=(0,90))
+
 plt.savefig("figs/distribution_LE_by_continent.png")

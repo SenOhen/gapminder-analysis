@@ -64,6 +64,12 @@ Put all the plots in one figure with a title.
 Look at the seaborn [FacetGrid API reference](https://seaborn.pydata.org/generated/seaborn.FacetGrid.html)
 for data-viz ideas.
 
+To do this, run `make q1`, which produces the following image:
+![](figs/distribution_LE_by_continent.png)
+All continents' life expectancies varied from around 40 years to around 80 years, except Oceania, for which all life expectancies were around 80 years.
+Oceania has the highest average life expectancy (in addition to the lowest variation), followed by Europe and the Americas. Life expectancies in Asia peaked around 70 years, just like Europe and the Americas, but there was a larger spread, i.e. more instances of lower life expectancies.
+Life expectancies were lowest on average in Africa, where they peaked at around 45 years.
+
 ## Question 2 -- time evolution of life expectancy by continent
 
 For each continent, use box-and-whisker plots to visualize the time evolution of life expectancy by 
@@ -73,11 +79,26 @@ As in Question 2, make sure your plots are labeled and easy to read, and put all
 Look at the seaborn [FacetGrid API reference](https://seaborn.pydata.org/generated/seaborn.FacetGrid.html)
 for ideas.
 
+To do this, run `make q2`, which produces the following image:
+![](figs/time_evolution_LE_by_continent.png)
+All continents' average life expectancies rose steadily from 1952 to 2007. 
+Oceania and Europe had the highest average life expectancies in 1952 (around 65 years), and both contintents experienced small but steady growth to around 75 years in 2007.
+Asia, the Americas had similar rises in life expectancy. Africa started with the lowest life expectancy, and experienced a slower rise than Asia and the Americas.
+
 ## Question 3 -- life expectancy vs GDP
 
 Use scatter plots to visualize the relationship between life expectancy and GDP per capita for each continent.
 Compare the use of linear and log scales for GDP. 
 Comment on the relationships that seem significant and any outliers you notice.
+
+To do this, run `make q3`, which produces the following images:
+![](figs/LE_vs_GDPpercapita_linear_scale.png)
+![](figs/LE_vs_GDPpercapita_log_scale.png)
+
+All continents' data suggests a positive correlation between GDP per capita and life expectancy. However, there is a significan number of outliers in Asia, where some instances of extremely high GDP per capita (highest in the world) came with average life expectancies, less than a large number of instances of lower GDP per capita.
+The data for Africa is least indicative among all continents of a positive correlation between GDP per capita and life expectancy. Notice that while there is a wide range of life expectancies, (25 years to 75 years), the GDP per capita is exclusively below $25,000.
+The data suggests that above a GDP per capita of $25,000, there is a slight rise in life expectancy for a rise in GDP per capita.
+The linear scale is a better visualization of the correlation between GDP per capita and life expectancy, while the log scale is a better visualization of the variation of GDP per capita among countries.
 
 ## Question 4 -- PDF of life expectancy
 
@@ -88,3 +109,8 @@ Comment on the relationships that seem significant and any outliers you notice.
 * Comment briefly on the result (i.e., explain the dominant features in the chart with a few sentences).
   * Make sure to use the results in previous questions to justify your interpretation.
 
+To do this, run `make q4`, which produces the following image:
+![](figs/PDF_of_LE.png)
+The distribution of life expectancis appears to be bimodal, with modes at approximately 45 years and approximately 70 years. There is a steady rise from 30 years to 45 years, and a slight dip up till a local minimum of around 60 years, before a sharp rise to the global maximum of around 70 years, followed by a steep fall to 80 years, whose probability is low and similar to 35 years.
+The first peak of around 45 years is due to the data for Africa, as well as the early data for Asia.
+The global peak of around 70 years is due primarily to data for the Americas, data for Europe and later time period data Asia.
